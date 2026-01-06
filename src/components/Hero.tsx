@@ -1,3 +1,5 @@
+const BASE_URL = '/portfolio/'
+
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden w-full" style={{ width: '100%', marginLeft: 0, marginRight: 0 }}>
@@ -5,56 +7,56 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-gray-900/50 to-dark-bg opacity-90"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,194,12,0.1),transparent_50%)]"></div>
       
-      <div className="w-full px-8 lg:px-16 xl:px-24 relative z-10 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 relative z-10 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center">
           {/* Left Column - Text Content */}
-          <div className="lg:col-span-4">
-            <p className="font-unbounded text-[24px] text-[#C7C7C7] mb-2">I'm</p>
+          <div className="lg:col-span-4 order-2 lg:order-1 text-center lg:text-left">
+            <p className="font-unbounded text-lg sm:text-xl md:text-[24px] text-[#C7C7C7] mb-2">I'm</p>
             <h1 
-              className="font-unbounded text-white mb-2 font-bold leading-tight whitespace-nowrap"
+              className="font-unbounded text-white mb-2 font-bold leading-tight"
               style={{
-                fontSize: '42px',
+                fontSize: 'clamp(28px, 5vw, 42px)',
                 lineHeight: '1.2em'
               }}
             >
               Hamza Parvaiz
             </h1>
             <h2 
-              className="font-unbounded text-accent mb-6 font-bold leading-tight"
+              className="font-unbounded text-accent mb-4 md:mb-6 font-bold leading-tight"
               style={{
-                fontSize: '38px',
+                fontSize: 'clamp(20px, 4vw, 38px)',
                 lineHeight: '1.3em',
                 maxWidth: '100%'
               }}
             >
               Software Engineer | Web & Mobile Apps
             </h2>
-            <p className="font-poppins text-[18px] text-[#C7C7C7] mb-8 max-w-md">
+            <p className="font-poppins text-sm sm:text-base md:text-[18px] text-[#C7C7C7] mb-6 md:mb-8 max-w-md mx-auto lg:mx-0">
               I'm Hamza Parvaiz, creating full-stack web and mobile applications designed for real-world business workflows.
             </p>
             
             {/* Buttons */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6 md:mb-8">
               <a 
                 href="https://wa.me/923368367395?text=I%20want%20help%20from%20you."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent text-dark-bg font-poppins text-[18px] font-semibold px-6 py-3 rounded-full hover:bg-black hover:border-2 hover:border-accent hover:text-accent transition-colors flex items-center gap-2 border-2 border-transparent group"
+                className="bg-accent text-dark-bg font-poppins text-sm sm:text-base md:text-[18px] font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-black hover:border-2 hover:border-accent hover:text-accent transition-colors flex items-center gap-2 border-2 border-transparent group"
               >
-                <svg className="w-5 h-5 text-dark-bg group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-dark-bg group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Hire Me Now
               </a>
-              <button className="w-12 h-12 rounded-full border-2 border-accent bg-transparent flex items-center justify-center hover:bg-black hover:border-accent transition-colors animate-pulse-play">
-                <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-accent bg-transparent flex items-center justify-center hover:bg-black hover:border-accent transition-colors animate-pulse-play">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                 </svg>
               </button>
             </div>
             
             {/* LinkedIn Link */}
-            <div className="flex items-center gap-2 mb-8">
+            <div className="flex items-center justify-center lg:justify-start gap-2 mb-6 md:mb-8">
               <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" />
               </svg>
@@ -62,8 +64,7 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/hamza-parvaiz-541472203/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-poppins text-white hover:text-accent transition-colors"
-                style={{ fontSize: '16px' }}
+                className="font-poppins text-white hover:text-accent transition-colors text-xs sm:text-sm md:text-base"
               >
                 linkedin.com/in/hamza-parvaiz
               </a>
@@ -71,54 +72,52 @@ const Hero = () => {
           </div>
 
           {/* Center Column - Image */}
-          <div className="lg:col-span-4 flex justify-center items-center relative">
-            <div className="relative">
+          <div className="lg:col-span-4 flex justify-center items-center relative order-1 lg:order-2 mb-6 lg:mb-0">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px]">
               <img 
-                src="/portfolio/imajes/Me.png" 
+                src={`${BASE_URL}imajes/Me.png`}
                 alt="Hamza Parvaiz" 
-                className="relative z-10 rounded-lg"
+                className="relative z-10 rounded-lg w-full h-auto"
                 style={{
-                  width: '380px',
-                  height: '480px',
-                  maxWidth: '100%',
+                  aspectRatio: '380/480',
                   objectFit: 'cover',
                   objectPosition: 'center top'
                 }}
               />
               {/* Small filled circular dots of different sizes */}
-              <div className="absolute top-8 right-8 w-3 h-3 bg-accent rounded-full opacity-60"></div>
-              <div className="absolute top-16 right-12 w-2 h-2 bg-accent rounded-full opacity-50"></div>
-              <div className="absolute top-4 right-16 w-4 h-4 bg-accent rounded-full opacity-70"></div>
+              <div className="absolute top-4 right-4 sm:top-8 sm:right-8 w-2 h-2 sm:w-3 sm:h-3 bg-accent rounded-full opacity-60"></div>
+              <div className="absolute top-8 right-6 sm:top-16 sm:right-12 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full opacity-50"></div>
+              <div className="absolute top-2 right-8 sm:top-4 sm:right-16 w-2.5 h-2.5 sm:w-4 sm:h-4 bg-accent rounded-full opacity-70"></div>
             </div>
           </div>
 
           {/* Right Column - Specialized In */}
-          <div className="lg:col-span-4">
-            <div className="flex items-center gap-2 mb-4">
-              <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <div className="lg:col-span-4 order-3 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
               </svg>
-              <p className="font-poppins text-[18px] text-white">Specialized In</p>
+              <p className="font-poppins text-sm sm:text-base md:text-[18px] text-white">Specialized In</p>
             </div>
-            <h3 className="font-unbounded text-2xl text-white mb-4 font-bold">
+            <h3 className="font-unbounded text-lg sm:text-xl md:text-2xl text-white mb-3 md:mb-4 font-bold">
               I build web and mobile apps that help products scale and grow.
             </h3>
-            <p className="font-poppins text-[18px] text-white mb-6">
+            <p className="font-poppins text-sm sm:text-base md:text-[18px] text-white mb-4 md:mb-6">
               Building web and mobile apps that help brands grow.
             </p>
             <a 
               href="#about" 
-              className="inline-flex items-center gap-2 text-white hover:text-accent transition-colors mb-8"
+              className="inline-flex items-center justify-center lg:justify-start gap-2 text-white hover:text-accent transition-colors mb-6 md:mb-8"
             >
-              <span className="font-poppins text-[18px] font-bold">Download CV</span>
-              <div className="w-5 h-5 bg-accent rounded-full flex items-center justify-center">
-                <svg className="w-3 h-3 text-dark-bg" fill="currentColor" viewBox="0 0 24 24">
+              <span className="font-poppins text-sm sm:text-base md:text-[18px] font-bold">Download CV</span>
+              <div className="w-4 h-4 sm:w-5 sm:h-5 bg-accent rounded-full flex items-center justify-center">
+                <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-dark-bg" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 9l-7 7-7-7" />
                 </svg>
               </div>
             </a>
             <div>
-              <p className="font-poppins text-[18px] text-white mb-4">Follow Me:</p>
+              <p className="font-poppins text-sm sm:text-base md:text-[18px] text-white mb-3 md:mb-4">Follow Me:</p>
               <div className="flex items-center gap-3">
                 {/* WhatsApp */}
                 <a 
