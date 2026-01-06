@@ -18,21 +18,11 @@ const Footer = () => {
           {/* Column 1 - Logo and Description */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div 
-                className="w-12 h-12 rounded"
-                style={{
-                  background: 'linear-gradient(135deg, #FFC20C 0%, #9DE600 100%)'
-                }}
-              ></div>
-              <span 
-                className="font-unbounded font-bold"
-                style={{
-                  fontSize: '24px',
-                  color: '#FFFFFF'
-                }}
-              >
-                HAMZA
-              </span>
+              <img 
+                src="/portfolio/imajes/Hamza.png" 
+                alt="Hamza Parvaiz Logo" 
+                className="w-[160px] h-[72px] object-contain"
+              />
             </div>
             <p 
               className="font-poppins mb-6"
@@ -44,7 +34,7 @@ const Footer = () => {
                 marginBottom: '24px'
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.
+              I'm Hamza Parvaiz, creating full-stack web and mobile applications designed for real-world business workflows.
             </p>
             {/* Social Media Icons */}
             <div className="flex gap-3">
