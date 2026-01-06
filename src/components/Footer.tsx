@@ -1,4 +1,6 @@
 
+const BASE_URL = '/portfolio/'
+
 const Footer = () => {
   return (
     <footer 
@@ -19,7 +21,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/portfolio/imajes/Hamza.png" 
+                src={`${BASE_URL}imajes/Hamza.png`}
                 alt="Hamza Parvaiz Logo" 
                 className="w-[160px] h-[72px] object-contain"
               />

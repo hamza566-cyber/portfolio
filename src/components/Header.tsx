@@ -1,6 +1,8 @@
 import { useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
+const BASE_URL = '/portfolio/'
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -15,7 +17,7 @@ const Header = () => {
           {/* Logo */}
           <a href="/portfolio/" target="_blank" rel="noopener noreferrer" className="flex items-center flex-shrink-0">
             <img 
-              src="/portfolio/imajes/Hamza.png" 
+              src={`${BASE_URL}imajes/Hamza.png`}
               alt="Hamza Parvaiz Logo" 
               className="w-[160px] h-[72px] object-contain"
             />
